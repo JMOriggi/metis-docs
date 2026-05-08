@@ -37,7 +37,7 @@
     border-bottom: 1px solid var(--rule); padding-bottom: 16px; margin: 0 0 24px 0;
   }
   .reveal h2 {
-    font-size: 1.85rem; text-transform: none; font-weight: 600;
+    font-size: 2.0rem; text-transform: none; font-weight: 600;
     color: var(--muted); margin-top: -6px; margin-bottom: 26px;
   }
   .reveal h3 {
@@ -74,8 +74,9 @@
   .lede .item.gap b { color: var(--pain); }
   .workflow-img { margin-top: 28px; text-align: center; }
   .workflow-img img { display: block; margin: 0 auto; max-width: 1000px; max-height: 220px; }
-  .workflow-img .caption {
+  .caption {
     margin-bottom: 14px; font-size: 0.95rem; color: var(--muted); font-style: italic;
+    text-align: center;
   }
   .pain { color: var(--pain); font-weight: 600; }
   .ok   { color: var(--ok);   font-weight: 700; font-size: 1.45rem; }
@@ -123,11 +124,22 @@
   .stat-list b { color: #2c4a1a; font-weight: 700; }
   .hero-img { text-align: center; }
   .hero-img img {
-    display: inline-block; max-width: 100%; max-height: 720px;
-    background: #fcfcfa; border: 1px solid var(--rule); border-radius: 8px;
-    padding: 4px; box-sizing: border-box;
+    display: inline-block; max-width: 100%; max-height: 770px;
+    box-sizing: border-box;
   }
-  video { max-width: 100%; max-height: 540px; display: block; margin: 0 auto; border-radius: 6px; }
+  video { max-width: 100%; max-height: 770px; display: block; margin: 0 auto; }
+  .reveal .slides section.tool-slide {
+    height: 100%;
+    display: flex; flex-direction: column;
+  }
+  .tool-slide .hero-img {
+    flex: 1 1 auto; min-height: 0; margin: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .tool-slide .hero-img img {
+    max-width: 100%; max-height: 100%;
+    width: auto; height: auto; object-fit: contain;
+  }
   .deck-logo {
     position: fixed; top: 20px; left: 26px; z-index: 60;
     display: flex; align-items: center; gap: 10px;
@@ -193,7 +205,7 @@
 
   <div class="workflow-img">
     <div class="caption">Researchers still juggle multiple disconnected tools to brainstorm, screen, and review.</div>
-    <img src="workflow.svg" alt="Researcher connected to multiple disconnected tools: folder of papers, LLM agent, hand review, ASReview, PubMed">
+    <img src="assets/workflow.svg" alt="Researcher connected to multiple disconnected tools: folder of papers, LLM agent, hand review, ASReview, PubMed">
   </div>
 </section>
 
@@ -237,7 +249,7 @@
               <path d="M5 14c0 1.7 4 3 9 3s9-1.3 9-3"/>
             </svg>
           </span>
-          <span>store all <b>~40M</b> PubMed papers</span>
+          <span>store all <b>~40M</b> PubMed papers and add yours</span>
         </li>
         <li>
           <span class="stat-icon" aria-hidden="true">
@@ -270,42 +282,51 @@
         </li>
       </ul>
     </div>
-    <div class="col-img">
-      <img src="overview.svg" alt="Metis architecture: unified backend with PubMed corpus, LLM agent, automated reviewer, and institution papers, sitting above the UI which sits above the user">
+    <div>
+      <div class="caption">A unified back-end behind a single UI puts the researcher in control end-to-end.</div>
+      <div class="col-img">
+        <img src="assets/overview.svg" alt="Metis architecture: unified backend with PubMed corpus, LLM agent, automated reviewer, and institution papers, sitting above the UI which sits above the user">
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============================================================
-     Slide 3a — Tool layout: overview
+     Slide 3 — Tool layout: annotated
      ============================================================ -->
-<section>
+<section class="tool-slide">
   <h1>The tool</h1>
-  <h2>Overview</h2>
   <div class="hero-img">
-    <img src="screenshots/annotated1.png" alt="Metis UI overview — three-pane layout: chat, context bag, citation graph">
+    <img src="assets/annotated.png" alt="Metis UI — annotated three-pane layout">
   </div>
 </section>
 
 <!-- ============================================================
-     Slide 3b — Tool layout: quick actions
+     Slide 4 — Tool layout: overview
      ============================================================ -->
-<section>
+<section class="tool-slide">
   <h1>The tool</h1>
-  <h2>Quick actions</h2>
   <div class="hero-img">
-    <img src="screenshots/annotated2.png" alt="Metis UI quick actions — chat shortcuts, filter bar, citation graph interactions">
+    <img src="assets/annotated1.png" alt="Metis UI overview — three-pane layout: chat, context bag, citation graph">
   </div>
 </section>
 
 <!-- ============================================================
-     Slide 4 — Demo
+     Slide 5 — Tool layout: quick actions
+     ============================================================ -->
+<section class="tool-slide">
+  <h1>The tool</h1>
+  <div class="hero-img">
+    <img src="assets/annotated2.png" alt="Metis UI quick actions — chat shortcuts, filter bar, citation graph interactions">
+  </div>
+</section>
+
+<!-- ============================================================
+     Slide 6 — Demo
      ============================================================ -->
 <section>
   <h1>Demo</h1>
-  <h2>End-to-end walkthrough</h2>
-
-  <video controls preload="metadata" src="screenshots/video_demo.webm"></video>
+  <video controls preload="metadata" src="assets/video_demo.webm"></video>
 </section>
 
 </div></div>

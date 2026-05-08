@@ -22,7 +22,7 @@
 
   <!-- Top: unified Metis backend box -->
   <rect class="box-outer" x="40" y="20" width="820" height="220" rx="16"/>
-  <text class="title" x="450" y="56">Metis · all-in-one backend</text>
+  <text class="title" x="450" y="56">Back-End</text>
 
   <!-- Icon: PubMed corpus -->
   <g transform="translate(150, 145)">
